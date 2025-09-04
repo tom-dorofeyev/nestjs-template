@@ -27,7 +27,7 @@ $ npm run start
 For automatic rebuilding and reloading during development:
 
 ```bash
-$ npm run start:dev
+$ npm run dev
 ```
 
 ## Production mode
