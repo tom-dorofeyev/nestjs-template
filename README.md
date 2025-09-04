@@ -1,4 +1,4 @@
-# Setup MongoDB and Redis
+# Setup MongoDB
 
 Ensure Docker is running and that port 27018 is available for MongoDB.
 
@@ -13,7 +13,6 @@ This will perform necessary setup actions before you begin.
 # Compile and run the project
 
 Use the following commands to compile and start the project in different modes:
-
 
 ## Development mode
 
