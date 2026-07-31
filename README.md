@@ -19,7 +19,13 @@ under `test/acceptance` and use Gherkin with Cucumber.js.
 $ npm test
 $ npm run test:e2e
 $ npm run test:acceptance
+$ npm run test:mutation
 ```
+
+Mutation testing uses Stryker with the Jest test suite. Its HTML report is
+written to `reports/mutation/mutation.html`. The initial score thresholds are
+80% (high), 60% (low), and 0% (build-breaking); tighten `stryker.config.mjs` as
+the test suite matures.
 
 Add one `.feature` file per behaviour in `test/acceptance/features`, with its
 step definitions in `test/acceptance/step-definitions`. Cucumber writes an HTML
