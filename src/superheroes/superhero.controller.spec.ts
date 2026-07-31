@@ -14,6 +14,7 @@ describe('SuperheroesController', () => {
     name: 'Bruce Wayne',
     alias: 'Batman',
     powers: ['Money'],
+    recruitmentStatus: 'AVAILABLE',
   };
 
   beforeEach(async () => {

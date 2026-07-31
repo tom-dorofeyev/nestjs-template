@@ -13,6 +13,6 @@ import { SuperheroService } from './superhero.service';
   ],
   controllers: [SuperheroController],
   providers: [SuperheroRepository, SuperheroService],
-  exports: [],
+  exports: [SuperheroRepository],
 })
 export class SuperheroModule {}

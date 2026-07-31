@@ -8,6 +8,8 @@ export interface ISuperhero {
   alias: string;
   powers: string[];
   weaknesses?: string[];
+  recruitmentStatus: string;
+  teamName?: string | null;
 }
 
 export type SuperheroDocument = HydratedDocument<Superhero>;
@@ -28,6 +30,16 @@ export class Superhero implements ISuperhero {
 
   @Prop({ required: false, type: [String] })
   weaknesses?: string[];
+
+  @Prop({
+    required: true,
+    enum: ['AVAILABLE', 'RECRUITED'],
+    default: 'AVAILABLE',
+  })
+  recruitmentStatus: string;
+
+  @Prop({ type: String, default: null })
+  teamName?: string | null;
 }
 
 export const SuperheroSchema = SchemaFactory.createForClass(Superhero);

@@ -17,6 +17,12 @@ export class SuperheroResponseDto implements ISuperhero {
   @ApiPropertyOptional()
   weaknesses?: string[];
 
+  @ApiProperty({ enum: ['AVAILABLE', 'RECRUITED'] })
+  recruitmentStatus: string;
+
+  @ApiPropertyOptional()
+  teamName?: string | null;
+
   static fromSuperhero(superhero: ISuperhero): SuperheroResponseDto {
     return {
       id: superhero.id,
@@ -24,6 +30,8 @@ export class SuperheroResponseDto implements ISuperhero {
       alias: superhero.alias,
       powers: superhero.powers,
       weaknesses: superhero.weaknesses,
+      recruitmentStatus: superhero.recruitmentStatus,
+      teamName: superhero.teamName,
     };
   }
 
