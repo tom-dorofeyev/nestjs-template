@@ -5,6 +5,7 @@ import { SuperheroModule } from './superheroes/superhero.module';
 import { HttpModule } from './common/http/http.module';
 import { LogModule } from './common/log/log.module';
 import { LogMiddleware } from './common/log/log.middleware';
+import { SagaModule } from './saga/saga.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { LogMiddleware } from './common/log/log.middleware';
     SuperheroModule,
     HttpModule,
     LogModule,
+    SagaModule,
   ],
   controllers: [AppController],
 })
